@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -e "\n$(ls -1A | sed -e 's/\.\///g' -e 's/\.\./,/g' -e 'sort -nr' -e 's/\././g' -e 's/\../../g')"

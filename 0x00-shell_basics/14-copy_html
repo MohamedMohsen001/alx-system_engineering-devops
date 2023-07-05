@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync --update -raz --exclude='.*' *.html ../
+rsync --update -raz --exclude='.*' *.html ..

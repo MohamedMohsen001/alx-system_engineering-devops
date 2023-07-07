@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "\nEpisode IV\n"
+telnet towel.blinkenlights.nl

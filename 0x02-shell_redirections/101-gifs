@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" | cut -d "." -f 1 | sort -t "." -k 1,1 -r -f -i
+find . -type f -iname '*.gif' -printf '%f\n' | sed -e 's/\.gif$//' -e 's/\(.*\)/\L\1/' | sort -f | uniq

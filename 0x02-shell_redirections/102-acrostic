@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/bash 
 { tr '\n' '\0' < input_file; echo -ne '\0'; } | xargs -0 -n1 sh -c 'echo "$0" | head -c1'

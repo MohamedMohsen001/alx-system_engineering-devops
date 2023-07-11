@@ -1,2 +1,2 @@
 #!/bin/bash 
-{ tr '\n' '\0' < input_file; echo -ne '\0'; } | xargs -0 -n1 sh -c 'echo "$0" | head -c1'
+echo $(cat "${1:-/dev/stdin}" | cut -c 1 | tr -d '\n')

@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\n' | sed -e 's/\.gif$//' -e 's/\(.*\)/\L\1/' | sort -f | uniq
+find . -type f -iname '*.gif' -exec basename {} \; | sed 's/\.[^.]*$//' | tr '[:upper:]' '[:lower:]' | sort -f | uniq
